@@ -1,4 +1,4 @@
-package com.adanac.tool.rageon.intf.ip.service;
+package com.adanac.tool.rageon.intf.ip.entity;
 
 import java.io.Serializable;
 
