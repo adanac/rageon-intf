@@ -1,6 +1,8 @@
 package com.adanac.tool.rageon.intf.common.entity;
 
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CommonDto implements Serializable {
 
@@ -11,9 +13,9 @@ public class CommonDto implements Serializable {
 
 	private String id;
 
-	private String name;
+	private String username;
 
-	private String pwd;
+	private String passwd;
 
 	private Integer age;
 
@@ -23,21 +25,21 @@ public class CommonDto implements Serializable {
 
 	public CommonDto(String name, Integer age) {
 		super();
-		this.name = name;
+		this.username = name;
 		this.age = age;
 	}
 
 	public CommonDto(String id, String name, String pwd) {
 		super();
 		this.id = id;
-		this.name = name;
-		this.pwd = pwd;
+		this.username = name;
+		this.passwd = pwd;
 	}
 
 	public CommonDto(String name, String pwd, Integer age) {
 		super();
-		this.name = name;
-		this.pwd = pwd;
+		this.username = name;
+		this.passwd = pwd;
 		this.age = age;
 	}
 
@@ -49,20 +51,20 @@ public class CommonDto implements Serializable {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public String getPwd() {
-		return pwd;
+	public String getPasswd() {
+		return passwd;
 	}
 
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setPasswd(String passwd) {
+		this.passwd = passwd;
 	}
 
 	public Integer getAge() {
@@ -75,7 +77,16 @@ public class CommonDto implements Serializable {
 
 	@Override
 	public String toString() {
-		return "CommonDto [id=" + id + ", name=" + name + ", pwd=" + pwd + ", age=" + age + "]";
+		return "CommonDto [id=" + id + ", username=" + username + ", passwd=" + passwd + ", age=" + age + "]";
+	}
+
+	public Map<String, Object> toMap() {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("id", id);
+		map.put("username", username);
+		map.put("passwd", passwd);
+		map.put("age", age);
+		return map;
 	}
 
 }

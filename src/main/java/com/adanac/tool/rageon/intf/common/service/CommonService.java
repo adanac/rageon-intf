@@ -1,24 +1,43 @@
 package com.adanac.tool.rageon.intf.common.service;
 
+import java.util.List;
+
 import com.adanac.framework.page.Pager;
 import com.adanac.framework.web.controller.BaseResult;
 import com.adanac.tool.rageon.intf.common.entity.BootstrapPage;
 import com.adanac.tool.rageon.intf.common.entity.CommonDto;
 
-public interface BootstrapTableService {
+public interface CommonService {
 
 	/**
 	 * 分页查询dto
-	 * 
-	 * @param keywordDto
-	 * @param param
-	 * @return
+	 * @param query 0精确查询，1根据id或username模糊匹配
 	 */
-	Pager<CommonDto> queryCommonDtoList(CommonDto commonDto, BootstrapPage param);
+	Pager<CommonDto> queryCommonDtoPage(CommonDto commonDto, BootstrapPage param, Integer query);
 
 	/**
-	 * 根据ID获取dto
+	 * 查询dto列表
 	 */
-	BaseResult getCommonDto(String id);
+	List<CommonDto> queryCommonDtoList(CommonDto commonDto);
+
+	/**
+	 * 保存单个用户
+	 * @param commonDto
+	 * @return
+	 */
+	BaseResult addCommonDto(CommonDto commonDto);
+
+	/**
+	 * 批量保存用户
+	 * @param paramJson
+	 * @return
+	 */
+	BaseResult addCommonDto(List<CommonDto> commonDtoList);
+
+	BaseResult getCommonDtoByID(String id);
+
+	BaseResult modCommonDto(String id);
+
+	BaseResult delCommonDto(String id);
 
 }
