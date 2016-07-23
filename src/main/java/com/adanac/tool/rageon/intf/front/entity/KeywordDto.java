@@ -1,7 +1,10 @@
-package com.adanac.tool.rageon.intf.front;
+package com.adanac.tool.rageon.intf.front.entity;
 
 import java.io.Serializable;
 
+/**
+ * 关键字dto
+ */
 public class KeywordDto implements Serializable {
 
 	private static final long serialVersionUID = 7285563901349307371L;

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.SqlParameter;
 
 import com.adanac.framework.page.Pager;
 
@@ -51,4 +52,6 @@ public interface BaseDao {
 
 	/** 根据sqlId执行，返回主键值 */
 	Number execute4PrimaryKey(String sqlId, Map<String, Object> paramMap);
+
+	public Map<String, Object> call(String sqlId, Map<String, Object> paramMap, List<SqlParameter> sqlParameters);
 }

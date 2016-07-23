@@ -12,6 +12,8 @@ public class RageonConstant {
 	public static final String SUCCESS = "1";
 	public static final String ERROR = "2";
 
+	public static final String OPER_TYPE_ADD = "add";
+
 	public enum State {
 		FAIL("FAIL", 0), SUCCESS("SUCCESS", 1), ERROR("ERROR", 2);
 		private String name;
