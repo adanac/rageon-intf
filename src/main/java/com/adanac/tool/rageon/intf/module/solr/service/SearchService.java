@@ -6,7 +6,7 @@ import com.adanac.framework.page.Pager;
 import com.adanac.framework.page.PagerParam;
 import com.adanac.tool.rageon.intf.module.solr.entity.SolrGoodsDto;
 
-public interface SolrGoodsSearchService {
+public interface SearchService {
 
 	/**
 	 * 
@@ -80,5 +80,12 @@ public interface SolrGoodsSearchService {
 	 * @return
 	 */
 	public SolrGoodsDto getBySkuId(String skuId);
+
+	/**
+	 * 测试solr
+	 * @param companyId
+	 * @return
+	 */
+	Pager<com.adanac.commclient.solr.dto.SolrGoodsDto> searchGoodsSolrClient(String companyId);
 
 }
