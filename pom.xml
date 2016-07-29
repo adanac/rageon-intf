@@ -7,7 +7,6 @@
 	    <version>1.0.0</version>
 	    <relativePath>../rageon-pom/pom.xml</relativePath>
     </parent>
-    <groupId>com.adanac.tool</groupId>
  	<artifactId>rageon-intf</artifactId>
 	<packaging>jar</packaging>
     <name>rageon-intf</name>
