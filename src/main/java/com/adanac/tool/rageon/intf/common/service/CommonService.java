@@ -3,8 +3,8 @@ package com.adanac.tool.rageon.intf.common.service;
 import java.util.List;
 
 import com.adanac.framework.page.Pager;
+import com.adanac.framework.page.PagerParam;
 import com.adanac.framework.web.controller.BaseResult;
-import com.adanac.tool.rageon.intf.common.entity.BootstrapPage;
 import com.adanac.tool.rageon.intf.common.entity.CommonDto;
 
 public interface CommonService {
@@ -13,7 +13,7 @@ public interface CommonService {
 	 * 分页查询dto
 	 * @param query 0精确查询，1根据id或username模糊匹配
 	 */
-	Pager<CommonDto> queryCommonDtoPage(CommonDto commonDto, BootstrapPage param, Integer query);
+	Pager<CommonDto> queryCommonDtoPage(CommonDto commonDto, PagerParam param, Integer query);
 
 	/**
 	 * 查询dto列表
@@ -35,6 +35,8 @@ public interface CommonService {
 	BaseResult addCommonDto(List<CommonDto> commonDtoList);
 
 	BaseResult getCommonDtoByID(String id);
+
+	CommonDto getCommonDto(String id);
 
 	BaseResult modCommonDto(String id);
 

@@ -14,10 +14,9 @@ public class CommonDto implements Serializable {
 	private String id;
 
 	private String username;
-
-	private String passwd;
-
+	private Integer sex;
 	private Integer age;
+	private String passwd;
 
 	public CommonDto() {
 		super();
@@ -26,6 +25,13 @@ public class CommonDto implements Serializable {
 	public CommonDto(String name, Integer age) {
 		super();
 		this.username = name;
+		this.age = age;
+	}
+
+	public CommonDto(String username, Integer sex, Integer age) {
+		super();
+		this.username = username;
+		this.sex = sex;
 		this.age = age;
 	}
 
@@ -59,6 +65,14 @@ public class CommonDto implements Serializable {
 		this.username = username;
 	}
 
+	public Integer getSex() {
+		return sex;
+	}
+
+	public void setSex(Integer sex) {
+		this.sex = sex;
+	}
+
 	public String getPasswd() {
 		return passwd;
 	}
@@ -77,15 +91,17 @@ public class CommonDto implements Serializable {
 
 	@Override
 	public String toString() {
-		return "CommonDto [id=" + id + ", username=" + username + ", passwd=" + passwd + ", age=" + age + "]";
+		return "CommonDto [id=" + id + ", username=" + username + ", sex=" + sex + ", age=" + age + ", passwd=" + passwd
+				+ "]";
 	}
 
 	public Map<String, Object> toMap() {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("id", id);
 		map.put("username", username);
-		map.put("passwd", passwd);
+		map.put("sex", sex);
 		map.put("age", age);
+		map.put("passwd", passwd);
 		return map;
 	}
 
