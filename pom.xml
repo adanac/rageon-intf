@@ -14,7 +14,7 @@
 	<dependencies>
 
 	<dependency>
-		<groupId>com.adanac.commclient</groupId>
+		<groupId>com.adanac.commonclient</groupId>
 		<artifactId>solr-client</artifactId>
 		<version>1.0.0</version>
 	</dependency>
